@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    ../variables/config_art.robot
+Resource    ../keywords/Tab_basic_data.robot
 
 *** Keywords ***
 Click Element with Delay   
@@ -84,19 +85,19 @@ Wait And Wait Until Element Contains
     Wait Until Keyword Succeeds    3x    2.5s    Wait And Wait Until Element Contains    ${locator}    ${text}    
 
 
-Open browser web url	#ชื่อที่จะนำไปใช้
-    [Documentation]    
-    [Arguments]    ${url}    ${browserName}    
-    SeleniumLibrary.open browser    ${url}    browser=${browserName}    
-    ...    options=binary_location=r"C:\\chrome-win64\\chrome.exe"  
+# Open browser web url	#ชื่อที่จะนำไปใช้
+#     [Documentation]    
+#     [Arguments]    ${url}    ${browserName}    
+#     SeleniumLibrary.open browser    ${url}    browser=${browserName}    
+#     ...    options=binary_location=r"C:\\chrome-win64\\chrome.exe"  
 
 
 
 Login dohome and click web art(Create)
     #Open browser web url    ${url_dohome}    headlesschrome
-    Open browser web url    ${url_dohome}    chrome            
+    Open browser    ${url_dohome}    chrome            
     #Maximize Browser Window 
-    Set Window Position    1920    0
+    # Set Window Position    1920    0
     Maximize Browser Window 
     Set Window Size    1920    1080
     Wait until keyword succeeds    5x   2s    Wait Until Element Contains    //button[text()='เข้าสู่ระบบ']    เข้าสู่ระบบ      
@@ -113,10 +114,18 @@ Login dohome and click web art(Create)
     Maximize Browser Window 
     #Set Window Size    1920    1080    
     Wait until keyword succeeds    5x   2s    Wait Until Element Is Visible    //h3[text()="Article Master"]
+    Wait And Click Element                    //p[text()='จัดการสินค้า']
+    Wait And Click Element                    //p[text()='จัดการข้อมูลสินค้า']
+    # Wait And Wait Until Element Is Visible    //div[@class="dx-datagrid-text-content"][text()='วันที่สร้าง']
+    Wait And Wait Until Element Is Visible    //*[text()=' สร้างสินค้าใหม่']/parent::span
+    # สร้าง Article
+    Click create article
+    Sleep    0.5s
+
 
 
 Login dohome and click web art(Approve avp)
-    Open browser web url    ${url_dohome}    headlesschrome
+    Open browser    ${url_dohome}    headlesschrome
     # Open browser web url    ${url_dohome}    chrome             
     Set Window Size    1920    1080
     # Maximize Browser Window
@@ -136,7 +145,7 @@ Login dohome and click web art(Approve avp)
 
 
 Login dohome and click web art(Approve dm)
-    Open browser web url    ${url_dohome}    headlesschrome
+    Open browser    ${url_dohome}    headlesschrome
     # Open browser web url    ${url_dohome}    chrome             
     Set Window Size    1920    1080
     # Maximize Browser Window

@@ -1,0 +1,192 @@
+# Naming convention -> ตัวอย่างการตั้งชื่อ elements
+# +----------+----------------------------+--------+-----------------+
+# | Category |      UI/Control type       | Prefix |     Example     |
+# +----------+----------------------------+--------+-----------------+
+# | Basic    | Button                     | btn    | btnExit         |
+# | Basic    | Check box                  | chk    | chkReadOnly     |
+# | Basic    | Combo box                  | cbo    | cboEnglish      |
+# | Basic    | Common dialog              | dlg    | dlgFileOpen     |
+# | Basic    | Date picker                | dtp    | dtpPublished    |
+# | Basic    | Dropdown List / Select tag | ddl    | ddlCountry      |
+# | Basic    | Form                       | frm    | frmEntry        |
+# | Basic    | Frame                      | fra    | fraLanguage     |
+# | Basic    | Image                      | img    | imgIcon         |
+# | Basic    | Label                      | lbl    | lblHelpMessage  |
+# | Basic    | Links/Anchor Tags          | lnk    | lnkForgotPwd    |
+# | Basic    | List box                   | lst    | lstPolicyCodes  |
+# | Basic    | Menu                       | mnu    | mnuFileOpen     |
+# | Basic    | Text Area                  | txa    | txaDescription  |
+# | Basic    | Text box                   | txt    | txtLastName      
+# | Complex  | Panel/Fieldset             | pnl    | pnlGroup        |
+# | Complex  | Slider                     | sld    | sldScale        |
+# | Complex  | StatusBar                  | sta    | staDateTime     |
+# | Complex  | Toolbar                    | tlb    | tlbActions      |
+# +----------+----------------------------+--------+-----------------+
+
+#ข้อมูลส่วนหัว
+Header_information:
+  ddl_vendor_no: //input[@name="vendor_no"]/following-sibling::div/div/input
+  txt_name_th: //input[@name="name_th"]
+  txt_name_en: //input[@name="name_en"]
+
+Tab_basic_data:
+  #1. รายละเอียดเกี่ยวกับตัวสินค้า
+  ddl_article_category: //input[@name="article_category"]/following-sibling::div/div/input
+  ddl_mc_level_2: //input[@name="merchandise_category2"]/following-sibling::div/div/input
+  ddl_mc_level_5:  //input[@name="merchandise_category"]/following-sibling::div/div/input
+  ddl_division: //input[@name="division"]/following-sibling::div/div/input
+  ddl_artl_statistics_grp: //input[@name="artl_statistics_grp"]/following-sibling::div/div/input
+  ddl_astmt_List_Type: //input[@name="astmt_list_type"]/following-sibling::div/div/input
+  ddl_material_Type: //input[@name="material_type"]/following-sibling::div/div/input
+  ddl_distr_Channel: //select[@name="distr_ch"]/following-sibling::div/div/input
+  chk_Channel_1: //*[contains(text() , 'C1')]/preceding-sibling::div/div/div
+  chk_Channel_2: //*[contains(text() , 'C2')]/preceding-sibling::div/div/div
+  chk_Channel_3: //*[contains(text() , 'C3')]/preceding-sibling::div/div/div
+  chk_Channel_4: //*[contains(text() , 'C4')]/preceding-sibling::div/div/div
+  chk_Channel_5: //*[contains(text() , 'C5')]/preceding-sibling::div/div/div
+  btn_Channel_button: //*[contains(@class , "dx-selectbox-popup-wrapper dx-tagbox-popup-wrapper")]//*[@class = "dx-button-text" and text() = "OK"]/parent::div
+  ddl_valuation_class: //*[@name="valuation_class"]/parent::div/div//input
+  txt_e_comm_name_th: //input[@name="e_comm_name_th"]
+  txt_search_name: //input[@name="search_word"]
+  txt_search_remark: //input[@name="search_remark"]
+  txt_product_model: //input[@name="product_model"]
+  ddl_brand_id: //input[@name="brand_id"]/following-sibling::div/div/input
+  txt_old_article: //input[@name="old_article"]
+  ddl_repack: //input[@name="repack"]/following-sibling::div/div/input
+  ddl_product_transform: //input[@name="product_transform"]/following-sibling::div/div/input
+  ddl_country_of_region: //input[@name="country_of_region"]/following-sibling::div/div/input
+  ddl_hb_nonhb: //input[@name="hb_nonhb"]/following-sibling::div/div/input
+  ddl_production: //input[@name="production"]/following-sibling::div/div/input
+  ddl_tradmark: //input[@name="tradmark"]/following-sibling::div/div/input
+  ddl_brand_type: //input[@name="brand_type"]/following-sibling::div/div/input
+  ddl_color_id: //input[@name="color_id"]/following-sibling::div/div/input
+
+  #2. ข้อมูลเกี่ยวกับสินค้ามีอายุ
+  txt_tot_shelf_life: //input[@name="tot_shelf_life"]/following-sibling::div/div/input
+  txt_rem_shelf_life: //input[@name="rem_shelf_life"]/following-sibling::div/div/input
+
+  #3. ข้อมูลเกี่ยวกับ Indicator สินค้า
+  ddl_product_status: //input[@name="product_status"]/following-sibling::div/div/input
+  ddl_abc_indicator: //input[@name="abc_indicator"]/following-sibling::div/div/input
+  ddl_product_role: //input[@name="product_role"]/following-sibling::div/div/input
+  ddl_product_sub_role: //input[@name="product_sub_role"]/following-sibling::div/div/input
+  ddl_product_trend: //input[@name="product_trend"]/following-sibling::div/div/input
+
+  #4. ข้อมูลเกี่ยวกับกลุ่มจัดซื้อและผู้ดูแลการสั่งซื้อ
+  ddl_head_purchaser_group_no: //input[@name="head_purchaser_group_no"]/following-sibling::div/div/input
+  ddl_head_im: //input[@name="head_im"]/following-sibling::div/div/input
+  ddl_purchaser_group_no: //input[@name="purchaser_group_no"]/following-sibling::div/div/input
+  ddl_import_purchase: //input[@name="import_purchase"]/following-sibling::div/div/input
+  ddl_im_group: //input[@name="im_group"]/following-sibling::div/div/input
+  
+  #5. ข้อมูลการจัดหาสต็อกสินค้าภาพรวม
+  ddl_avail_check: //input[@name="avail_check"]/following-sibling::div/div/input
+  chk_negative_stocks: //*[text()="สินค้าที่สามารถขายได้เมื่อสต็อกติดลบ"]/preceding-sibling::span
+  ddl_gen_item_cat_grp: //input[@name="gen_item_cat_grp"]/following-sibling::div/div/input
+  ddl_tax_class: //input[@name="tax_class"]/following-sibling::div/div/input
+  ddl_serial_number_profile: //input[@name="serial_number_profile"]/following-sibling::div/div/input
+  ddl_stor_condition: //input[@name="stor_condition"]/following-sibling::div/div/input
+  ddl_loading_group: //input[@name="loading_group"]/following-sibling::div/div/input
+  chk_flag_batch_management: //*[text()="สินค้าที่ต้องระบุ batch (Batch management )"]/preceding-sibling::span
+
+  #6. หน่วยสินค้า , ขนาด,บาร์โค๊ด รวมแพคกิ้ง
+  #หน่วยที่ 1
+  ddl_units_id_section_6_unit_1: //input[@name="units_id"]/following-sibling::div/div/input
+  txt_rate_unit_base_section_6_unit_1: //input[@name="rate_unit_base"]/following-sibling::div/div/input
+  txt_rate_unit_code_section_6_unit_1: //input[@name="rate_unit_code"]/following-sibling::div/div/input
+  txt_barcode_section_6_unit_1: //input[@name="barcode_no"]/following-sibling::div/div/input
+  txt_width_section_6_unit_1: //input[@name="width"]/following-sibling::div/div/input
+  txt_long_section_6_unit_1: //input[@name="long"]/following-sibling::div/div/input
+  txt_high_section_6_unit_1: //input[@name="high"]/following-sibling::div/div/input
+  txt_weight_section_6_unit_1: //input[@name="weight"]/following-sibling::div/div/input
+  chk_Oun_open_PO: //span[@class="dx-checkbox-text"][text()='Oun (หน่วยบรรจุในการสั่งซื้อ/เปิด PO)']/preceding-sibling::span
+  chk_Sun_base_unit: //span[@class="dx-checkbox-text"][text()='Sun (หน่วยที่สามารถขายได้ = เบสยูนิต)']/preceding-sibling::span
+
+  #หน่วยที่ 2
+  txt_rate_unit_base_section_6_unit_2: //*[text()='หน่วยที่ ' and text()='2']/parent::div/following-sibling::div//input[@name="rate_unit_base"]/following-sibling::div//input
+  ddl_units_sale_id_section_6_unit_2: //*[text()='หน่วยที่ ' and text()='2']/parent::div/following-sibling::div//input[@name="units_sale_id"]/following-sibling::div//input
+  txt_rate_unit_code_section_6_unit_2: //*[text()='หน่วยที่ ' and text()='2']/parent::div/following-sibling::div//input[@name="rate_unit_code"]/following-sibling::div//input
+  txt_barcode_section_6_unit_2: //*[text()='หน่วยที่ ' and text()='2']/parent::div/following-sibling::div//input[@name="barcode_no"]/following-sibling::div//input
+  txt_width_section_6_unit_2: //*[text()='หน่วยที่ ' and text()='2']/parent::div/following-sibling::div//input[@name="width"]/following-sibling::div//input
+  txt_long_section_6_unit_2: //*[text()='หน่วยที่ ' and text()='2']/parent::div/following-sibling::div//input[@name="long"]/following-sibling::div//input
+  txt_high_section_6_unit_2: //*[text()='หน่วยที่ ' and text()='2']/parent::div/following-sibling::div//input[@name="high"]/following-sibling::div//input
+  txt_weight_section_6_unit_2: //*[text()='หน่วยที่ ' and text()='2']/parent::div/following-sibling::div//input[@name="weight"]/following-sibling::div//input
+
+  #หน่วยที่ 3
+  txt_rate_unit_base_section_6_unit_3: //*[text()='หน่วยที่ ' and text()='3']/parent::div/following-sibling::div//input[@name="rate_unit_base"]/following-sibling::div//input
+  ddl_units_sale_id_section_6_unit_3: //*[text()='หน่วยที่ ' and text()='3']/parent::div/following-sibling::div//input[@name="units_sale_id"]/following-sibling::div//input
+  txt_rate_unit_code_section_6_unit_3: //*[text()='หน่วยที่ ' and text()='3']/parent::div/following-sibling::div//input[@name="rate_unit_code"]/following-sibling::div//input
+  txt_barcode_section_6_unit_3: //*[text()='หน่วยที่ ' and text()='3']/parent::div/following-sibling::div//input[@name="barcode_no"]/following-sibling::div//input
+  txt_width_section_6_unit_3: //*[text()='หน่วยที่ ' and text()='3']/parent::div/following-sibling::div//input[@name="width"]/following-sibling::div//input
+  txt_long_section_6_unit_3: //*[text()='หน่วยที่ ' and text()='3']/parent::div/following-sibling::div//input[@name="long"]/following-sibling::div//input
+  txt_high_section_6_unit_3: //*[text()='หน่วยที่ ' and text()='3']/parent::div/following-sibling::div//input[@name="high"]/following-sibling::div//input
+  txt_weight_section_6_unit_3: //*[text()='หน่วยที่ ' and text()='3']/parent::div/following-sibling::div//input[@name="weight"]/following-sibling::div//input
+
+  #หน่วยที่ 4
+  txt_rate_unit_base_section_6_unit_4: //*[text()='หน่วยที่ ' and text()='4']/parent::div/following-sibling::div//input[@name="rate_unit_base"]/following-sibling::div//input
+  ddl_units_sale_id_section_6_unit_4: //*[text()='หน่วยที่ ' and text()='4']/parent::div/following-sibling::div//input[@name="units_sale_id"]/following-sibling::div//input
+  txt_rate_unit_code_section_6_unit_4: //*[text()='หน่วยที่ ' and text()='4']/parent::div/following-sibling::div//input[@name="rate_unit_code"]/following-sibling::div//input
+  txt_barcode_section_6_unit_4: //*[text()='หน่วยที่ ' and text()='4']/parent::div/following-sibling::div//input[@name="barcode_no"]/following-sibling::div//input
+  txt_width_section_6_unit_4: //*[text()='หน่วยที่ ' and text()='4']/parent::div/following-sibling::div//input[@name="width"]/following-sibling::div//input
+  txt_long_section_6_unit_4: //*[text()='หน่วยที่ ' and text()='4']/parent::div/following-sibling::div//input[@name="long"]/following-sibling::div//input
+  txt_high_section_6_unit_4: //*[text()='หน่วยที่ ' and text()='4']/parent::div/following-sibling::div//input[@name="high"]/following-sibling::div//input
+  txt_weight_section_6_unit_4: //*[text()='หน่วยที่ ' and text()='4']/parent::div/following-sibling::div//input[@name="weight"]/following-sibling::div//input
+
+  #หน่วยที่ 5
+  txt_rate_unit_base_section_6_unit_5: //*[text()='หน่วยที่ ' and text()='5']/parent::div/following-sibling::div//input[@name="rate_unit_base"]/following-sibling::div//input
+  ddl_units_sale_id_section_6_unit_5: //*[text()='หน่วยที่ ' and text()='5']/parent::div/following-sibling::div//input[@name="units_sale_id"]/following-sibling::div//input
+  txt_rate_unit_code_section_6_unit_5: //*[text()='หน่วยที่ ' and text()='5']/parent::div/following-sibling::div//input[@name="rate_unit_code"]/following-sibling::div//input
+  txt_barcode_section_6_unit_5: //*[text()='หน่วยที่ ' and text()='5']/parent::div/following-sibling::div//input[@name="barcode_no"]/following-sibling::div//input
+  txt_width_section_6_unit_5: //*[text()='หน่วยที่ ' and text()='5']/parent::div/following-sibling::div//input[@name="width"]/following-sibling::div//input
+  txt_long_section_6_unit_5: //*[text()='หน่วยที่ ' and text()='5']/parent::div/following-sibling::div//input[@name="long"]/following-sibling::div//input
+  txt_high_section_6_unit_5: //*[text()='หน่วยที่ ' and text()='5']/parent::div/following-sibling::div//input[@name="high"]/following-sibling::div//input
+  txt_weight_section_6_unit_5: //*[text()='หน่วยที่ ' and text()='5']/parent::div/following-sibling::div//input[@name="weight"]/following-sibling::div//input
+
+  #7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง
+  #หน่วยที่ 1
+  txt_width_section_7_unit_1: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//input[@name='width']/following-sibling::div//div//input
+  txt_long_section_7_unit_1: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//input[@name='long']/following-sibling::div//div//input
+  txt_high_section_7_unit_1: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//input[@name='high']/following-sibling::div//div//input
+  txt_weight_section_7_unit_1: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//input[@name='weight']/following-sibling::div//div//input
+
+  #หน่วยที่ 2
+  txt_width_section_7_unit_2: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//*[text()='หน่วยที่ ' and text()='2']/parent::div//input[@name="width"]/following-sibling::div//input
+  txt_long_section_7_unit_2: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//*[text()='หน่วยที่ ' and text()='2']/parent::div//input[@name="long"]/following-sibling::div//input
+  txt_high_section_7_unit_2: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//*[text()='หน่วยที่ ' and text()='2']/parent::div//input[@name="high"]/following-sibling::div//input
+  txt_weight_section_7_unit_2: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//*[text()='หน่วยที่ ' and text()='2']/parent::div//input[@name="weight"]/following-sibling::div//input
+
+  #หน่วยที่ 3
+  txt_width_section_7_unit_3: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//*[text()='หน่วยที่ ' and text()='3']/parent::div//input[@name="width"]/following-sibling::div//input
+  txt_long_section_7_unit_3: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//*[text()='หน่วยที่ ' and text()='3']/parent::div//input[@name="long"]/following-sibling::div//input
+  txt_high_section_7_unit_3: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//*[text()='หน่วยที่ ' and text()='3']/parent::div//input[@name="high"]/following-sibling::div//input
+  txt_weight_section_7_unit_3: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//*[text()='หน่วยที่ ' and text()='3']/parent::div//input[@name="weight"]/following-sibling::div//input
+
+  #หน่วยที่ 4
+  txt_width_section_7_unit_4: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//*[text()='หน่วยที่ ' and text()='4']/parent::div//input[@name="width"]/following-sibling::div//input
+  txt_long_section_7_unit_4: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//*[text()='หน่วยที่ ' and text()='4']/parent::div//input[@name="long"]/following-sibling::div//input
+  txt_high_section_7_unit_4: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//*[text()='หน่วยที่ ' and text()='4']/parent::div//input[@name="high"]/following-sibling::div//input
+  txt_weight_section_7_unit_4: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//*[text()='หน่วยที่ ' and text()='4']/parent::div//input[@name="weight"]/following-sibling::div//input
+
+  #หน่วยที่ 5
+  txt_width_section_7_unit_5: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//*[text()='หน่วยที่ ' and text()='5']/parent::div//input[@name="width"]/following-sibling::div//input
+  txt_long_section_7_unit_5: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//*[text()='หน่วยที่ ' and text()='5']/parent::div//input[@name="long"]/following-sibling::div//input
+  txt_high_section_7_unit_5: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//*[text()='หน่วยที่ ' and text()='5']/parent::div//input[@name="high"]/following-sibling::div//input
+  txt_weight_section_7_unit_5: //*[text()='7. หน่วยสินค้า , ขนาด,บาร์โค๊ด ไม่รวมแพคกิ้ง']/following::div//*[text()='หน่วยที่ ' and text()='5']/parent::div//input[@name="weight"]/following-sibling::div//input
+
+  #12. สถานะสินค้า ใน Tab Basic Data
+  dtp_first_sale_date: //input[@name="first_sale_date"]/following-sibling::div/div/input
+
+  #13. Attribute หลัก
+  ddl_color_stationery_SA: //input[@name="d5aadb9a-3aba-4fea-83a1-1c522dcce4d9"]/following-sibling::div/div/input
+
+  #14. คุณสมบัติการรับประกัน บำรุงรักษา
+  txa_selling_point: //*[@name="selling_point"]/preceding-sibling::div[@class="dx-quill-container ql-container"]/div
+  txa_product_features: //*[@name="product_features"]/preceding-sibling::div[@class="dx-quill-container ql-container"]/div
+  txa_maintenance: //*[@name="maintenance"]/preceding-sibling::div[@class="dx-quill-container ql-container"]/div
+  txa_warranty_terms: //*[@name="warranty_terms"]/preceding-sibling::div[@class="dx-quill-container ql-container"]/div
+  txa_method_of_use: //*[@name="method_of_use"]/preceding-sibling::div[@class="dx-quill-container ql-container"]/div
+  txa_caution: //*[@name="caution"]/preceding-sibling::div[@class="dx-quill-container ql-container"]/div
+
+  #17. รูปภาพสินค้า
+  btn_upload_file: //*[@id="img-product"]/following-sibling::div//input
+  chk_select_main_pic: //*[text()='17. รูปภาพสินค้า']/ancestor::div[2]/following-sibling::div//input[@type="radio"]
