@@ -216,7 +216,7 @@ Input rem_shelf_life
     Wait And Input Text with Delay Ignore Error     //input[@name="rem_shelf_life"]/following-sibling::div/div/input    ${rem_shelf_life}
     Wait And Press Keys Ignore Error                //input[@name="rem_shelf_life"]/following-sibling::div/div/input    \\13
     
- Input and Select product_status
+Input and Select product_status
     [Documentation]    สถานะสินค้า Active / Inactive
     [Arguments]    ${product_status}
     Wait And Scroll Element Into View    //*[@class="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-displayBlock"][text()='4. ข้อมูลเกี่ยวกับกลุ่มจัดซื้อและผู้ดูแลการสั่งซื้อ']

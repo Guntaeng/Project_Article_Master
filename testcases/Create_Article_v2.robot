@@ -5,17 +5,44 @@ Suite Setup    Login dohome and click web art(Create)
 Test Template        Create Article 
 Library    DataDriver    file=../resources/data_Create_Article.csv  dialect=excel    encoding=utf-8
 Resource    ../keywords/common_art.robot
-Resource    ../keywords/func_key_menu_create.robot
+# Resource    ../keywords/func_key_menu_create.robot
+Resource    ../keywords/Tab_basic_data.robot
+Resource    ../keywords/Tab_sales.robot
+Resource    ../keywords/Tab_purchasing.robot
+Resource    ../keywords/Tab_DC_store.robot
 Test Teardown    Refresh page
 
 *** Test Cases ***
-Create Article Good Return    
+Create Article Good Return    ${Negative_stock}    ${mark_batch}    ${add_unit2}    ${add_unit3}    ${add_unit4}    ${add_unit5}
+    ...    ${vendor_no}    ${new_name_th}    ${row['name_en']}    ${row['article_category']}    ${row['merc_category_MC2']}    ${new_MC5}    ${row['division_type']}    ${row['artl_statistics_grp']}    ${row['astmt_list_type']}    ${row['CH_1']}    ${row['CH_2']}    ${row['CH_3']}
+    ...    ${row['CH_4']}    ${row['CH_5']}    ${row['material_type']}    ${row['valuation_class']}    ${row['e_comm_name_th']}    ${row['search_word']}    ${row['search_remark']}    ${row['product_model']}    ${row['brand_id']}    ${row['old_article']}    ${row['repack']}
+    ...    ${row['product_transform']}    ${row['country_of_region']}    ${row['hb_nonhb']}    ${row['production']}    ${row['tradmark']}    ${row['brand_type']}    ${row['color_id']}    ${row['tot_shelf_life']}    ${row['rem_shelf_life']}    ${row['product_status']}
+    ...    ${row['abc_indicator']}    ${row['product_role']}    ${row['product_sub_role']}    ${row['product_trend']}    ${row['head_purchaser_group_no']}    ${row['purchaser_group_no']}
+    ...    ${row['avail_check']}    ${row['gen_item_cat_grp']}    ${row['tax_class']}    ${row['serial_number_profile']}    ${row['stor_condition']}    ${row['loading_group']}
+    ...    ${row['units_id_s6_u1']}    ${row['rate_unit_base_s6_u1']}    ${row['rate_unit_code_s6_u1']}    ${row['barcode_no_s6_u1']}    ${row['width_base_s6_u1']}    ${row['long_base_s6_u1']}    ${row['high_base_s6_u1']}    ${row['weight_base_s6_u1']}
+    ...    ${row['units_sale_id_s6_u2']}    ${row['rate_unit_base_s6_u2']}    ${row['rate_unit_code_s6_u2']}    ${row['barcode_no_s6_u2']}    ${row['width_base_s6_u2']}    ${row['long_base_s6_u2']}    ${row['high_base_s6_u2']}    ${row['weight_base_s6_u2']}
+    ...    ${row['units_sale_id_s6_u3']}    ${row['rate_unit_base_s6_u3']}    ${row['rate_unit_code_s6_u3']}    ${row['barcode_no_s6_u3']}    ${row['width_base_s6_u3']}    ${row['long_base_s6_u3']}    ${row['high_base_s6_u3']}    ${row['weight_base_s6_u3']}
+    ...    ${row['units_sale_id_s6_u4']}    ${row['rate_unit_base_s6_u4']}    ${row['rate_unit_code_s6_u4']}    ${row['barcode_no_s6_u4']}    ${row['width_base_s6_u4']}    ${row['long_base_s6_u4']}    ${row['high_base_s6_u4']}    ${row['weight_base_s6_u4']}
+    ...    ${row['units_sale_id_s6_u5']}    ${row['rate_unit_base_s6_u5']}    ${row['rate_unit_code_s6_u5']}    ${row['barcode_no_s6_u5']}    ${row['width_base_s6_u5']}    ${row['long_base_s6_u5']}    ${row['high_base_s6_u5']}    ${row['weight_base_s6_u5']}
+    ...    ${row['width_base_s7_u1']}    ${row['long_base_s7_u1']}    ${row['high_base_s7_u1']}    ${row['weight_base_s7_u1']}
+    ...    ${row['width_base_s7_u2']}    ${row['long_base_s7_u2']}    ${row['high_base_s7_u2']}    ${row['weight_base_s7_u2']}
+    ...    ${row['width_base_s7_u3']}    ${row['long_base_s7_u3']}    ${row['high_base_s7_u3']}    ${row['weight_base_s7_u3']}
+    ...    ${row['width_base_s7_u4']}    ${row['long_base_s7_u4']}    ${row['high_base_s7_u4']}    ${row['weight_base_s7_u4']}
+    ...    ${row['width_base_s7_u5']}    ${row['long_base_s7_u5']}    ${row['high_base_s7_u5']}    ${row['weight_base_s7_u5']}
+    ...    ${row['first_sale_date']}     ${row['att_color']}   ${row['highlight_sell_point']}    ${row['product_features']}    ${row['maintenance']}    ${row['warranty_conditions']}    ${row['usage']}    ${row['precautions']}    ${row['lead_time']}    ${row['return_defective']}
+    ...    ${path_pic}    ${path_pic_1}    ${path_pic_2}    ${path_pic_3}    ${path_pic_4}    ${path_pic_5}    ${path_pic_6}    ${path_pic_7}    ${path_pic_8}    ${path_pic_9}    ${path_pic_10}
+    ...    ${path_pic_11}    ${path_pic_12}    ${path_pic_13}    ${path_pic_14}    ${path_pic_15}    ${path_pic_16}    ${path_pic_17}    ${path_pic_18}    ${path_pic_19}    ${path_pic_20}
+    ...    ${path_pic_21}    ${path_pic_22}    ${path_pic_23}    ${path_pic_24}    ${path_pic_25}    ${path_pic_26}    ${path_pic_27}    ${path_pic_28}    ${path_pic_29}    ${path_pic_30}
+    ...    ${path_pic_31}    ${path_pic_32}    ${path_pic_33}    ${path_pic_34}    ${path_pic_35}    ${path_pic_36}    ${path_pic_37}    ${path_pic_38}    ${path_pic_39}    ${path_pic_40}
+    ...    ${path_pic_41}    ${path_pic_42}    ${path_pic_43}    ${path_pic_44}    ${path_pic_45}    ${path_pic_46}    ${path_pic_47}    ${path_pic_48}    ${path_pic_49}    ${path_pic_50}       
+    ...    ${row['net_cost_price']}    ${row['currency']}    ${row['tax_code_vendor']}      ${row['set_pattern_sales']}
+
 
 *** Keywords ***
 Create Article
     [Arguments]    ${Negative_stock}    ${mark_batch}    ${add_unit2}    ${add_unit3}    ${add_unit4}    ${add_unit5}
-    ...    ${vendor_no}    ${new_name_th}    ${row['name_en']}    ${row['article_category']}    ${row['merc_category_MC2']}    ${new_MC5}    ${row['division_type']}    ${row['artl_statistics_grp']}    ${row['astmt_list_type']}
-    ...    ${row['material_type']}    ${row['valuation_class']}    ${row['e_comm_name_th']}    ${row['search_word']}    ${row['search_remark']}    ${row['product_model']}    ${row['brand_id']}    ${row['old_article']}    ${row['repack']}
+    ...    ${vendor_no}    ${new_name_th}    ${row['name_en']}    ${row['article_category']}    ${row['merc_category_MC2']}    ${new_MC5}    ${row['division_type']}    ${row['artl_statistics_grp']}    ${row['astmt_list_type']}    ${row['CH_1']}    ${row['CH_2']}    ${row['CH_3']}
+    ...    ${row['CH_4']}    ${row['CH_5']}    ${row['material_type']}    ${row['valuation_class']}    ${row['e_comm_name_th']}    ${row['search_word']}    ${row['search_remark']}    ${row['product_model']}    ${row['brand_id']}    ${row['old_article']}    ${row['repack']}
     ...    ${row['product_transform']}    ${row['country_of_region']}    ${row['hb_nonhb']}    ${row['production']}    ${row['tradmark']}    ${row['brand_type']}    ${row['color_id']}    ${row['tot_shelf_life']}    ${row['rem_shelf_life']}    ${row['product_status']}
     ...    ${row['abc_indicator']}    ${row['product_role']}    ${row['product_sub_role']}    ${row['product_trend']}    ${row['head_purchaser_group_no']}    ${row['purchaser_group_no']}
     ...    ${row['avail_check']}    ${row['gen_item_cat_grp']}    ${row['tax_class']}    ${row['serial_number_profile']}    ${row['stor_condition']}    ${row['loading_group']}
@@ -38,8 +65,7 @@ Create Article
     ...    ${row['net_cost_price']}    ${row['currency']}    ${row['tax_code_vendor']}      ${row['set_pattern_sales']}
 
 # Header
-    Enter the menu Create Article
-    Input vendor                                       ${vendor_no}
+    Input data vendor                                  ${vendor_no}
     Input name Thai Article                            ${new_name_th}
     Input name ENG Article                             ${row['name_en']}
        
@@ -52,7 +78,7 @@ Create Article
     Input and Select artl_statistics_grp               ${row['artl_statistics_grp']}
     Input and Select astmt_list_type                   ${row['astmt_list_type']}
     Input and Select material_type                     ${row['material_type']}
-    Select distr_ch C1/C2/C3
+    Select distr_ch C1/C2/C3/C4/C5                     ${row['CH_1']}    ${row['CH_2']}    ${row['CH_3']}    ${row['CH_4']}    ${row['CH_5']}
     Input and Select valuation_class                   ${row['valuation_class']}
     Input e_comm_name_th                               ${row['e_comm_name_th']}
     Input search_word                                  ${row['search_word']}
