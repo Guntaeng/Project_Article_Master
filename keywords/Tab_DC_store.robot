@@ -16,5 +16,4 @@ Request approval
     Wait And Click Element                    ${Tab_DC_store.btn_approve}
     Wait And Click Element                    ${Tab_DC_store.btn_confirm}
     Wait And Wait Until Element Is Visible    //*[text()="ขออนุมัติสินค้าเรียบร้อยแล้ว"]
-    Wait And Wait Until Element Is Visible    //*[text()="จัดการข้อมูลสินค้า"]/..
     Wait And Wait Until Element Is Visible    //*[text()=' สร้างสินค้าใหม่']/parent::span

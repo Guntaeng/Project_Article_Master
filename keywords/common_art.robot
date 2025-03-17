@@ -118,7 +118,6 @@ Login dohome and click web art(Create)
     Wait And Click Element                    //p[text()='จัดการข้อมูลสินค้า']
     # Wait And Wait Until Element Is Visible    //div[@class="dx-datagrid-text-content"][text()='วันที่สร้าง']
     Wait And Wait Until Element Is Visible    //*[text()=' สร้างสินค้าใหม่']/parent::span
-    # สร้าง Article
     Click create article
     Sleep    0.5s
 
@@ -166,3 +165,4 @@ Login dohome and click web art(Approve dm)
 
 Refresh page
     Execute JavaScript    location.reload()
+    Click create article
