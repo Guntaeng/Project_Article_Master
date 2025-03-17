@@ -12,10 +12,10 @@ Resource    ../keywords/common_art.robot
 *** Keywords ***
 #กดปุ่มสร้าง Article
 Click create article
+    Wait And Wait Until Element Is Visible    //*[text()=' สร้างสินค้าใหม่']/parent::span
     Wait And Click Element                    //*[text()=' สร้างสินค้าใหม่']/parent::span
     Wait And Wait Until Element Is Visible    //span[@class="MuiTab-wrapper"][text()="Basic data"]
     Wait And Wait Until Element Is Visible    //input[@name="vendor_no"]/following-sibling::div/div/input
-    Sleep    0.5s
 
 #SECTION 1
 Input data vendor
